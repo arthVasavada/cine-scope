@@ -1,7 +1,7 @@
 
 # CineScope - Movie Streaming Platform
 
-CineScope is a modern movie streaming platform inspired by Apple TV, featuring a responsive design and multiple carousels for trending, featured, and recommended movies. Built using **Vite**, **React**, **TypeScript**, **TailwindCSS**, and **Framer Motion** for smooth animations and elegant UI.
+CineScope is a modern movie streaming platform, featuring a responsive design and multiple carousels for trending, featured, and recommended movies. Built using **Vite**, **React**, **TypeScript**, **TailwindCSS**, and **Framer Motion** for smooth animations and elegant UI.
 
 ## Features
 
@@ -85,14 +85,6 @@ src/
 ├── App.tsx             # Main application entry point
 └── main.tsx            # Vite entry point
 ```
-
-## Screenshots
-
-![Hero Section](https://via.placeholder.com/800x400)
-*Hero section with video backdrop*
-
-![Carousels](https://via.placeholder.com/800x400)
-*Responsive carousels for movies*
 
 ## License
 
