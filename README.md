@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CineScope - Movie Streaming Platform
 
-Currently, two official plugins are available:
+CineScope is a modern movie streaming platform inspired by Apple TV, featuring a responsive design and multiple carousels for trending, featured, and recommended movies. Built using **Vite**, **React**, **TypeScript**, **TailwindCSS**, and **Framer Motion** for smooth animations and elegant UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Fetch and display movie data using the TMDB API.
+- Search and filter movies by genre or rating.
+- Movie detail pages with trailers and reviews.
+- Save favorite movies to a user profile.
+- Multiple carousels with smooth animations:
+  - **Trending Movies**
+  - **Featured Movies**
+  - **Recommended Movies**
+- Custom scrollbars and hidden scroll functionality for a clean UI.
+- Responsive design optimized for all devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: React, TypeScript, TailwindCSS, Framer Motion
+- **Build Tool**: Vite
+- **API**: TMDB (The Movie Database)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd cinescope
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add your TMDB API key:
+
+```
+VITE_TMDB_API_KEY=your_tmdb_api_key
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Running the Application
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Start the development server:
+```bash
+npm run dev
 ```
+
+Build the application for production:
+```bash
+npm run build
+```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+### Deployment
+
+Deploy the production build by uploading the `dist` folder to your hosting platform or using services like Netlify, Vercel, or AWS.
+
+## Project Structure
+
+```
+src/
+├── api/                # API utility functions
+├── assets/             # Static assets (e.g., videos, images)
+├── components/         # Reusable components (e.g., carousels)
+├── pages/              # Application pages (Home, MovieDetails, Favorites)
+├── store/              # Redux slices for state management
+├── App.tsx             # Main application entry point
+└── main.tsx            # Vite entry point
+```
+
+## Screenshots
+
+![Hero Section](https://via.placeholder.com/800x400)
+*Hero section with video backdrop*
+
+![Carousels](https://via.placeholder.com/800x400)
+*Responsive carousels for movies*
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+Happy streaming! 🚀
