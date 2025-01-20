@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'eba14987c564990d33cfa07f1832b079'; // Replace with your TMDb API key
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // Replace with your TMDb API key
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const getMovieDetails = async (id: number) => {
