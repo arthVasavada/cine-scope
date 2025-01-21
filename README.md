@@ -1,31 +1,35 @@
 
-# CineScope - Movie Streaming Platform
+# CineScope - Movie Recommendation App
 
-CineScope is a modern movie streaming platform, featuring a responsive design and multiple carousels for trending, featured, and recommended movies. Built using **Vite**, **React**, **TypeScript**, **TailwindCSS**, and **Framer Motion** for smooth animations and elegant UI.
+**CineScope** is a modern movie recommendation app that demonstrates API consumption, routing, and state management. Built with **Vite**, **React**, **TypeScript**, **TailwindCSS**, and **Framer Motion**, the app allows users to explore trending movies, view detailed pages with trailers and reviews, and save favorites for future reference.
 
 ## Features
 
-- Fetch and display movie data using the TMDB API.
-- Search and filter movies by genre or rating.
-- Movie detail pages with trailers and reviews.
-- Save favorite movies to a user profile.
-- Multiple carousels with smooth animations:
-  - **Trending Movies**
-  - **Featured Movies**
-  - **Recommended Movies**
-- Custom scrollbars and hidden scroll functionality for a clean UI.
-- Responsive design optimized for all devices.
+### Completed
+1. **Fetch and display movie data**:
+   - Data is fetched from the TMDb API.
+   - Carousels for trending, featured, and recommended movies.
+2. **Movie detail pages with trailers and reviews**:
+   - Each movie has a dedicated page showing details, trailers, and reviews.
+3. **Save favorite movies to a user profile**:
+   - Favorites functionality allows users to save movies locally.
+4. **Create a carousel of trending movies**:
+   - Animated carousels for trending, featured, and recommended movies.
+
+### To Be Implemented
+1. **Search and filter functionality**:
+   - Add a search bar to find movies by title.
+   - Enable filtering by genre or rating.
 
 ## Tech Stack
 
 - **Frontend**: React, TypeScript, TailwindCSS, Framer Motion
 - **Build Tool**: Vite
-- **API**: TMDB (The Movie Database)
+- **API**: TMDb (The Movie Database)
 
 ## Setup Instructions
 
 ### Prerequisites
-
 - Node.js (v14+)
 - npm or yarn
 
@@ -37,7 +41,7 @@ CineScope is a modern movie streaming platform, featuring a responsive design an
    ```
 2. Navigate to the project directory:
    ```bash
-   cd cinescope
+   cd cine-scope
    ```
 3. Install dependencies:
    ```bash
@@ -46,7 +50,7 @@ CineScope is a modern movie streaming platform, featuring a responsive design an
 
 ### Environment Variables
 
-Create a `.env` file in the root directory and add your TMDB API key:
+Create a `.env` file in the root directory and add your TMDb API key:
 
 ```
 VITE_TMDB_API_KEY=your_tmdb_api_key
@@ -71,7 +75,7 @@ npm run preview
 
 ### Deployment
 
-Deploy the production build by uploading the `dist` folder to your hosting platform or using services like Netlify, Vercel, or AWS.
+Deploy the production build by uploading the `dist` folder to your hosting platform or using Firebase Hosting.
 
 ## Project Structure
 
@@ -79,7 +83,7 @@ Deploy the production build by uploading the `dist` folder to your hosting platf
 src/
 ├── api/                # API utility functions
 ├── assets/             # Static assets (e.g., videos, images)
-├── components/         # Reusable components (e.g., carousels)
+├── components/         # Reusable components (e.g., carousels, modals)
 ├── pages/              # Application pages (Home, MovieDetails, Favorites)
 ├── store/              # Redux slices for state management
 ├── App.tsx             # Main application entry point
@@ -92,4 +96,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Happy streaming! 🚀
+Happy exploring! 🚀

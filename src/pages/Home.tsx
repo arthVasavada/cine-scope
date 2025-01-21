@@ -21,9 +21,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-gray-700 text-gray-100">
+    <div className="bg-slate-950 text-gray-100">
       <section className="h-screen flex flex-col items-center justify-center text-center relative">
-        <video className="absolute top-0 left-0 w-full h-full object-cover filter brightness-50" src="/src/assets/video/bg_cinescope.mp4" autoPlay loop muted playsInline></video>
+        <video className="absolute top-0 left-0 w-full h-full object-cover filter brightness-50" src="/assets/bg_cinescope.mp4" autoPlay loop muted playsInline></video>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 relative z-10">Discover Your Next Favorite Movie</h1>
         <p className="text-gray-300 mb-6 relative z-10">Stream anytime, anywhere.</p>
         <button 
@@ -36,7 +36,7 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="carousels p-10 rounded-lg">
+      <section className="carousels p-10 space-y-10">   
         <TrendingCarousel movies={trendingMovies} />
         <FeaturedCarousel movies={featuredMovies} />
         <RecommendedCarousel movies={recommendedMovies} />

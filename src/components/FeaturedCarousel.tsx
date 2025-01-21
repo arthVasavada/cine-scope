@@ -25,10 +25,10 @@ const FeaturedCarousel = ({ movies = [] }: { movies?: any[] }) => {
   }, [isScrolling, scrollDirection]);
 
   const handleMouseMove = (event: React.MouseEvent) => {
-    const { clientX, view } = event;
-    const width = view?.innerWidth || 0;
+    const { clientX } = event; // Removed 'view'
+    const width = window.innerWidth || 0; // Use window directly
     const proximity = 100;
-
+  
     if (clientX < proximity) {
       setScrollDirection("left");
       setIsScrolling(true);
@@ -43,19 +43,19 @@ const FeaturedCarousel = ({ movies = [] }: { movies?: any[] }) => {
 
   return (
     <div
-      className="relative bg-gray-700"
+      className="relative bg-slate-950"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setIsScrolling(false)}
     >
-      <h2 className="text-xl font-medium text-white mb-4 px-6">Featured Movies</h2>
+      <h2 className="text-xl font-light text-white mb-4 px-6 pb-3">Featured Movies</h2>
       <div
         ref={carouselRef}
-        className="flex space-x-4 px-6 overflow-x-auto scrollbar-none pt-2 pb-10"
+        className="flex space-x-4 px-6 overflow-x-auto scrollbar-none rounded-3xl"
       >
         {movies.map((movie) => (
           <motion.div
             key={movie.id}
-            className="w-48 flex-shrink-0 bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+            className="w-48 flex-shrink-0 bg-slate-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 30 }}
           >
